@@ -10,4 +10,7 @@
 ## Reflection
 
 ## Resources 
+- https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/radio 
 
+## Disclaimer
+This website is created as part of a student project for educational purposes only. All movie posters, title and related images are the property of their respective copyright holders. No copyright infringement is intended. 
