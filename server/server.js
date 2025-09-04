@@ -33,7 +33,7 @@ app.get("/movie-reviews", async (request, response) => {
 // todo - want to CREATE (POST) new data in the table 
 // - remember the body and the formValues
 app.post("/add-movie-reviews", (request, response) => {
-    const newMovieReview = request.body;
+    const newMovieReview = request.body.formValues;
     const query = db.query(`INSERT INTO movie_reviews (user_name, review, watch_again, rating) VALUES ($1, $2, $3, $4)`,
         [newMovieReview.user_name, newMovieReview.review, newMovieReview.watch_again, newMovieReview.rating]
     );
