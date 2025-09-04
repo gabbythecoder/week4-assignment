@@ -22,9 +22,21 @@ app.get("/", (request, response) => {
 }); 
 
 //===========================================
+// todo - want to READ (GET) all data from my table
+app.get("/movie-reviews", async (request, response) => {
+    //query the database
+    const query = await db.query(`SELECT * FROM movie_reviews`);
+    response.json(query.rows);
+});
 
-// todo - want to READ all data from my table
 
-// todo - want to CREATE new data in the table 
+// todo - want to CREATE (POST) new data in the table 
 // - remember the body and the formValues
+app.post("/add-movie-reviews", (request, response) => {
+    const newMovieReview = request.body;
+    const query = db.query(`INSERT INTO movie_reviews (user_name, review, watch_again, rating) VALUES ($1, $2, $3, $4)`,
+        [newMovieReview.user_name, newMovieReview.review, newMovieReview.watch_again, newMovieReview.rating]
+    );
+        response.json("Data sent", query);
+});
 
