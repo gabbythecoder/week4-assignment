@@ -5,13 +5,80 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./src/style.css">
     <script type="module" src="./src/app.js" defer></script>
 
-    <title>Guestbook</title>
+    <title>HorrorView</title>
   </head>
   <body>
+    <header>
+        <h1>HorrorView</h1>
+        <nav>
+          <ul>
+            <li>Home</li>
+            <li>Reviews</li>
+            <li>Contact</li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+      <img src="./images/scream.png" alt="scream movie poster">
+      <form id="movie-review-form">
+        <!-- for user's name -->
+        <label for="user_name">Name:</label>
+          <input type="text" name="user_name" id="user_name" required>
+        <!-- text box for reviews -->
+        <label for="review">Review:</label>
+          <input type="text" name="review" id="review" required>
+        <!-- watch again to include radio buttons for yes/no -->
+        <fieldset>
+          <legend>Would you watch again?</legend>
+          <label for="watch_again_yes">
+            <input type="radio" name="watch_again" id="watch_again_yes" value="true" required>
+            Yes
+          </label>
+          <label for="watch_again_no">
+            <input type="radio" name="watch_again" id="watch_again_no" value="false" required>
+            No
+          </label>
+        </fieldset>
+        <!-- star rating system (1-5)-->
+        <fieldset>
+        <legend>Rating:</legend>
+        <label for="rating-1">
+          <input type="radio" name="rating" id="rating-1" value="1" required>
+        </label>
+        <label for="rating-2">
+          <input type="radio" name="rating" id="rating-2" value="2" required>
+        </label>
+        <label for="rating-3">
+          <input type="radio" name="rating" id="rating-3" value="3" required>
+        </label>
+        <label for="rating-4">
+          <input type="radio" name="rating" id="rating-4" value="4" required>
+        </label>
+        <label for="rating-5">
+          <input type="radio" name="rating" id="rating-5" value="5" required>
+        </label>
+        </fieldset>
+
+        <!-- submit button -->
+        <button type="submit">Submit</button>
+        
+      </form>
+
+      <img src="./images/the-conjuring.png" alt="the conjuring movie poster">
+
+    
     <!-- HTML element that collects user input -->
     <!-- HTML element to contain the data from the database -->
+    </main>
+    <footer>
+        <p>&copy; Gabby French | Made with ❤️ in the UK</p>
+        <p>Disclaimer: This website is created as part of a student project for educational purposes only. All movie posters, title and related images are the property of their respective copyright holders. No copyright infringement is intended. </p>
+    </footer>
   </body>
 </html>
