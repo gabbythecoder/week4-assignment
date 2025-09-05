@@ -11,6 +11,7 @@
     <script type="module" src="./src/app.js" defer></script>
 
     <title>HorrorView</title>
+
   </head>
   <body>
     <header>
@@ -18,6 +19,7 @@
         <nav>
           <ul>
             <li>Home</li>
+            <li>Movies</li>
             <li>Reviews</li>
             <li>Contact</li>
           </ul>
@@ -25,52 +27,66 @@
     </header>
 
     <main>
-      <img src="./images/scream.png" alt="scream movie poster">
-      <form id="movie-review-form">
-        <!-- for user's name -->
-        <label for="user_name">Name:</label>
-          <input type="text" name="user_name" id="user_name" required>
-        <!-- text box for reviews -->
-        <label for="review">Review:</label>
-          <input type="text" name="review" id="review" required>
-        <!-- watch again to include radio buttons for yes/no -->
-        <fieldset>
-          <legend>Would you watch again?</legend>
-          <label for="watch_again_yes">
-            <input type="radio" name="watch_again" id="watch_again_yes" value="true" required>
-            Yes
-          </label>
-          <label for="watch_again_no">
-            <input type="radio" name="watch_again" id="watch_again_no" value="false" required>
-            No
-          </label>
-        </fieldset>
-        <!-- star rating system (1-5)-->
-        <fieldset>
-        <legend>Rating:</legend>
-        <label for="rating-1">
-          <input type="radio" name="rating" id="rating-1" value="1" required>
-        </label>
-        <label for="rating-2">
-          <input type="radio" name="rating" id="rating-2" value="2" required>
-        </label>
-        <label for="rating-3">
-          <input type="radio" name="rating" id="rating-3" value="3" required>
-        </label>
-        <label for="rating-4">
-          <input type="radio" name="rating" id="rating-4" value="4" required>
-        </label>
-        <label for="rating-5">
-          <input type="radio" name="rating" id="rating-5" value="5" required>
-        </label>
-        </fieldset>
+      <!-- left side of webpage -->
+      <section class="movie-poster">
+        <img src="./images/scream.png" alt="scream movie poster">
+      </section>
 
-        <!-- submit button -->
-        <button type="submit">Submit</button>
-        
-      </form>
+      <!-- right side of webpage -->
+      <section class="review-form-section">
+        <div id="review-container"></div>
 
-      <img src="./images/the-conjuring.png" alt="the conjuring movie poster">
+        <form id="movie-review-form">
+          <!-- movie title dropdown -->
+          <label for="movie_title">Movie:</label>
+          <select name="movie_title" id="movie_title" required>
+            <option value="">Select a movie</option>
+            <option value="Scream">Scream</option>
+            <option value="The Conjuring">The Conjuring</option>
+          </select>
+          <!-- for user's name -->
+          <label for="user_name">Name:</label>
+            <input type="text" name="user_name" id="user_name" required>
+          <!-- text box for reviews -->
+          <label for="review">Review:</label>
+            <input type="text" name="review" id="review" required>
+          <!-- watch again to include radio buttons for yes/no -->
+          <fieldset>
+            <legend>Would you watch again?</legend>
+              <label for="watch_again_yes">
+                <input type="radio" name="watch_again" id="watch_again_yes" value="true" required>
+                Yes
+              </label>
+              <label for="watch_again_no">
+                <input type="radio" name="watch_again" id="watch_again_no" value="false" required>
+                No
+              </label>
+          </fieldset>
+          <!-- star rating system (1-5)-->
+          <fieldset>
+            <legend>Rating:</legend>
+              <label for="rating-1">
+                <input type="radio" name="rating" id="rating-1" value="1" required>
+              </label>
+              <label for="rating-2">
+                <input type="radio" name="rating" id="rating-2" value="2" required>
+              </label>
+              <label for="rating-3">
+                <input type="radio" name="rating" id="rating-3" value="3" required>
+              </label>
+            <label for="rating-4">
+              <input type="radio" name="rating" id="rating-4" value="4" required>
+            </label>
+            <label for="rating-5">
+              <input type="radio" name="rating" id="rating-5" value="5" required>
+            </label>
+          </fieldset>
+          <!-- submit button -->
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <!-- <img src="./images/the-conjuring.png" alt="the conjuring movie poster"> -->
 
     
     <!-- HTML element that collects user input -->
