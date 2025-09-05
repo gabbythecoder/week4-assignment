@@ -19,12 +19,18 @@
     <header>
         <h1>HorrorView</h1>
         <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="">Movies</a></li>
-            <li><a href="#">Reviews</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Movies</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Reviews</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
           </ul>
+
+          <div class="hamburger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
         </nav>
     </header>
 
@@ -51,7 +57,7 @@
             <input type="text" name="user_name" id="user_name" required>
           <!-- text box for reviews -->
           <label for="review">Review:</label>
-            <input type="text" name="review" id="review" required>
+            <textarea name="review" id="review" rows="3" columns="10" required></textarea>
           <!-- watch again to include radio buttons for yes/no -->
           <fieldset>
             <legend>Would you watch again?</legend>
