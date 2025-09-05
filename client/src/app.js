@@ -53,7 +53,7 @@ async function displayReviews() {
 
         const reviewMovieTitle = document.createElement("p");
         reviewMovieTitle.className = "review-movie-title";
-        reviewMovieTitle.textContent = review.movie_title;
+        reviewMovieTitle.textContent = "Movie: " + review.movie_title;
 
         const reviewUserName = document.createElement("p");
         reviewUserName.className = "review-user-name";
@@ -67,9 +67,17 @@ async function displayReviews() {
         reviewWatchAgain.className = "review-watch-again";
         reviewWatchAgain.textContent = review.watch_again ? "Yes" : "No"; //making sure it shows Yes/No as it appears on form rather than boolean values
 
-        const reviewRating = document.createElement("p");
+        const reviewRating = document.createElement("div");
         reviewRating.className = "review-rating";
-        reviewRating.textContent = review.rating;
+        //render star rating 
+        for (let i = 1; i <= 5; i++) {
+            const star = document.createElement("i");
+            if (i <= review.rating) {
+                star.className = "fa-solid fa-ghost";
+                star.style.color = "#ff4444";
+            } 
+            reviewRating.appendChild(star);
+        }
 
         //appending to the reviewDisplay container
         reviewDisplay.appendChild(reviewMovieTitle);
@@ -84,3 +92,22 @@ async function displayReviews() {
 }
 
 displayReviews();
+
+//selecting the stars for ratings  
+const stars = document.querySelectorAll("#star-rating i");
+const ratingInput = document.getElementById("rating");
+
+stars.forEach((star, index1) => {
+    star.addEventListener("click", () => {
+
+        ratingInput.value = index1 + 1;
+            
+        stars.forEach((star, index2) => {
+            if (index2 <= index1) {
+                star.classList.add("selected");
+            } else {
+                star.classList.remove("selected");
+            }
+        });
+    });
+});
