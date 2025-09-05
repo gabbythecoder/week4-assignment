@@ -18,7 +18,7 @@ function handleSubmit(event) {
     console.log(formValues);
 
     //need to update this to the correct URL - this is just for testing
-    fetch("http://localhost:8080/add-movie-reviews", {
+    fetch("https://week4-assignment-1bct.onrender.com/add-movie-reviews", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
