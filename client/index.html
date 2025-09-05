@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./src/style.css">
     <script type="module" src="./src/app.js" defer></script>
@@ -18,10 +20,10 @@
         <h1>HorrorView</h1>
         <nav>
           <ul>
-            <li>Home</li>
-            <li>Movies</li>
-            <li>Reviews</li>
-            <li>Contact</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="">Movies</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
         </nav>
     </header>
@@ -63,23 +65,16 @@
               </label>
           </fieldset>
           <!-- star rating system (1-5)-->
-          <fieldset>
+          <fieldset class="rating">
             <legend>Rating:</legend>
-              <label for="rating-1">
-                <input type="radio" name="rating" id="rating-1" value="1" required>
-              </label>
-              <label for="rating-2">
-                <input type="radio" name="rating" id="rating-2" value="2" required>
-              </label>
-              <label for="rating-3">
-                <input type="radio" name="rating" id="rating-3" value="3" required>
-              </label>
-            <label for="rating-4">
-              <input type="radio" name="rating" id="rating-4" value="4" required>
-            </label>
-            <label for="rating-5">
-              <input type="radio" name="rating" id="rating-5" value="5" required>
-            </label>
+              <div id="star-rating">
+                <i class="fa-solid fa-ghost" data-value="1"></i>
+                <i class="fa-solid fa-ghost" data-value="2"></i>
+                <i class="fa-solid fa-ghost" data-value="3"></i>
+                <i class="fa-solid fa-ghost" data-value="4"></i>
+                <i class="fa-solid fa-ghost" data-value="5"></i>
+              </div>
+              <input type="hidden" name="rating" id="rating" required>
           </fieldset>
           <!-- submit button -->
           <button type="submit">Submit</button>
