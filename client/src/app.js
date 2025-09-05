@@ -30,3 +30,57 @@ function handleSubmit(event) {
 // todo - get database data from the server and render (display) on the page
 // - connect our client with the specific server route that GETs my data
 // - in some sort of loop, create new HTML elements to display each piece of data, and append to the DOM 
+const reviewContainer = document.getElementById("review-container");
+
+//fetching API 
+async function fetchMovieReviews() {
+    const response = await fetch("https://week4-assignment-1bct.onrender.com/movie-reviews");
+    const reviews = await response.json();
+    console.log(reviews);
+
+    return reviews;
+}
+
+//render the reviews on the page
+async function displayReviews() {
+    const reviews = await fetchMovieReviews();
+
+    reviewContainer.innerHTML = "";
+
+    reviews.forEach((review) => {
+        const reviewDisplay = document.createElement("div");
+        reviewDisplay.className = "review";
+
+        const reviewMovieTitle = document.createElement("p");
+        reviewMovieTitle.className = "review-movie-title";
+        reviewMovieTitle.textContent = review.movie_title;
+
+        const reviewUserName = document.createElement("p");
+        reviewUserName.className = "review-user-name";
+        reviewUserName.textContent = review.user_name;
+
+        const reviewText = document.createElement("p");
+        reviewText.className = "review-text";
+        reviewText.textContent = review.review;
+
+        const reviewWatchAgain = document.createElement("p");
+        reviewWatchAgain.className = "review-watch-again";
+        reviewWatchAgain.textContent = review.watch_again ? "Yes" : "No"; //making sure it shows Yes/No as it appears on form rather than boolean values
+
+        const reviewRating = document.createElement("p");
+        reviewRating.className = "review-rating";
+        reviewRating.textContent = review.rating;
+
+        //appending to the reviewDisplay container
+        reviewDisplay.appendChild(reviewMovieTitle);
+        reviewDisplay.appendChild(reviewUserName);
+        reviewDisplay.appendChild(reviewText);
+        reviewDisplay.appendChild(reviewWatchAgain);
+        reviewDisplay.appendChild(reviewRating);
+
+        //append to the reviewContainer 
+        reviewContainer.appendChild(reviewDisplay);
+    });
+}
+
+displayReviews();
