@@ -18,6 +18,9 @@ header {
     width: 100%;
     height: 5rem;
     padding: 0 1rem;
+    position: fixed;
+    z-index: 100;
+    background-color: #111;
 }
 
 h1 {
@@ -67,6 +70,7 @@ a:hover {
 
 /* === home content  === */
 .home-content {
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,8 +144,24 @@ a:hover {
     flex: 1;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-self: center;
     padding: 0.5rem;
+}
+
+.movie-poster-title {
+    font-family: "Creepster", sans-serif;
+    font-size: 1.9rem;
+    letter-spacing: 0.2rem;
+    margin: 0.3rem 1rem;
+    padding: 0.2rem;
+}
+
+.movie-poster-description {
+    font-style: italic;
+    margin: 1rem;
+    line-height: 1.3;
+    padding: 0.1rem;
 }
 
 .movie-poster img {
@@ -160,6 +180,7 @@ a:hover {
     /* flex-wrap: wrap; */
     /* gap: 2rem; */
     padding: 0.5rem;
+    align-self: center;
 }
 
 .horrorview-review-title {
@@ -234,6 +255,12 @@ a:hover {
     line-height: 1.5;
 }
 
+.review-watch-again {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
 /* === styling the form section === */
 #movie-review-form {
     background-color: #262626;
@@ -245,7 +272,7 @@ a:hover {
     box-shadow: 0 0 15px rgba(220, 20, 60, 0.5);
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
+    gap: 0.3rem;
     margin: 1.3rem auto 0;
 }
 
@@ -262,6 +289,13 @@ a:hover {
 
 #movie-review-form textarea {
     resize: none;
+}
+
+#character-count {
+    font-size: 0.8rem;
+    text-align: right;
+    color: #919191;
+    font-style: italic;
 }
 
 #movie-review-form fieldset {
@@ -317,7 +351,7 @@ footer {
     justify-content: center;
     align-items: center;
     line-height: 1.8;
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
