@@ -45,11 +45,12 @@ async function fetchMovieReviews() {
 async function displayReviews() {
     const reviews = await fetchMovieReviews();
 
+    //filtering reviews for the movie titled 'Scream' for this assignment
+    const screamReviews = reviews.filter(review => review.movie_title === "Scream");
+
     reviewContainer.innerHTML = "";
 
-    
-
-    reviews.forEach((review) => {
+    screamReviews.forEach((review) => {
         const reviewDisplay = document.createElement("div");
         reviewDisplay.className = "review";
 
@@ -63,7 +64,7 @@ async function displayReviews() {
 
         const reviewText = document.createElement("p");
         reviewText.className = "review-text";
-        reviewText.textContent = "HorrorView: " + review.review;
+        reviewText.textContent = review.review;
 
         const reviewWatchAgain = document.createElement("p");
         reviewWatchAgain.className = "review-watch-again";
@@ -128,4 +129,14 @@ const navMenu = document.querySelector(".nav-menu");
     document.querySelectorAll(".nav-link").forEach((event) => event.addEventListener("click", () => {
         hamburgerMenu.classList.remove("active");
         navMenu.classList.remove("active");
-    }))
+    }));
+
+    //character count for textarea 
+    const reviewTextarea = document.getElementById("review");
+    const characterCount = document.getElementById("character-count");
+    const maxLength = reviewTextarea.getAttribute("maxlength");
+
+    reviewTextarea.addEventListener("input", () => {
+        const currentLength = reviewTextarea.value.length;
+        characterCount.textContent = `${currentLength} / ${maxLength} characters`;
+    })
