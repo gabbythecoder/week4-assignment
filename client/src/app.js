@@ -47,6 +47,8 @@ async function displayReviews() {
 
     reviewContainer.innerHTML = "";
 
+    
+
     reviews.forEach((review) => {
         const reviewDisplay = document.createElement("div");
         reviewDisplay.className = "review";
@@ -61,11 +63,11 @@ async function displayReviews() {
 
         const reviewText = document.createElement("p");
         reviewText.className = "review-text";
-        reviewText.textContent = review.review;
+        reviewText.textContent = "HorrorView: " + review.review;
 
         const reviewWatchAgain = document.createElement("p");
         reviewWatchAgain.className = "review-watch-again";
-        reviewWatchAgain.textContent = review.watch_again ? "Yes" : "No"; //making sure it shows Yes/No as it appears on form rather than boolean values
+        reviewWatchAgain.textContent = `Watch Again? ${review.watch_again ? "Yes" : "No"}`; //making sure it shows Yes/No as it appears on form rather than boolean values
 
         const reviewRating = document.createElement("div");
         reviewRating.className = "review-rating";
