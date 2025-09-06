@@ -35,6 +35,22 @@
     </header>
 
     <main>
+      <section class="home-content">
+        <div class="home-text">
+          <h2 class="home-title">Welcome to HorrorView!</h2>
+            <p>Love horror movies? So do we! Here at HorrorView, you can:</p>
+              <ul>
+                <li>👻 Share your own reviews of your favourite (or not-so favourite) horror films</li>
+                <li>👻 Rate movies with creepy ghost ratings</li>
+                <li>👻 See if others would dare to watch them again</li>
+              </ul>
+            <br>
+            <p>Whether you're into slashers, supernatural scares, or psychological thrillers, HorrorView is your place to talk all things horror.</p>
+            <p class="dare-text">Dare to join the fright? 🔪🎬</p>
+        </div>
+      </section>
+
+      <div class="main-section">
       <!-- left side of webpage -->
       <section class="movie-poster">
         <img src="./images/scream.png" alt="scream movie poster">
@@ -42,6 +58,7 @@
 
       <!-- right side of webpage -->
       <section class="review-form-section">
+        <h2 class="horrorview-review-title">HorrorViews</h2>
         <div id="review-container"></div>
 
         <form id="movie-review-form">
@@ -56,7 +73,7 @@
           <label for="user_name">Name:</label>
             <input type="text" name="user_name" id="user_name" required>
           <!-- text box for reviews -->
-          <label for="review">Review:</label>
+          <label for="review">HorrorView:</label>
             <textarea name="review" id="review" rows="3" columns="10" required></textarea>
           <!-- watch again to include radio buttons for yes/no -->
           <fieldset>
@@ -72,7 +89,7 @@
           </fieldset>
           <!-- star rating system (1-5)-->
           <fieldset class="rating">
-            <legend>Rating:</legend>
+            <legend>HorrorView Rating:</legend>
               <div id="star-rating">
                 <i class="fa-solid fa-ghost" data-value="1"></i>
                 <i class="fa-solid fa-ghost" data-value="2"></i>
@@ -86,6 +103,7 @@
           <button type="submit">Submit</button>
         </form>
       </section>
+      </div>
 
       <!-- <img src="./images/the-conjuring.png" alt="the conjuring movie poster"> -->
 
@@ -95,7 +113,8 @@
     </main>
     <footer>
         <p>&copy; Gabby French | Made with ❤️ in the UK</p>
-        <p>Disclaimer: This website is created as part of a student project for educational purposes only. All movie posters, title and related images are the property of their respective copyright holders. No copyright infringement is intended. </p>
+        <p class="disclaimer full-screen">Disclaimer: This website is created as part of a student project for educational purposes only. All movie posters, title and related images are the property of their respective copyright holders. No copyright infringement is intended. </p>
+        <p class="disclaimer mobile">Educational project only. All images used belong to copyright holders.</p>
     </footer>
   </body>
 </html>
