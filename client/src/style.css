@@ -199,7 +199,7 @@ a:hover {
     border-radius: 8px;
     max-height: 320px;
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     margin: 0.5rem auto 0;
     overflow-y: auto;
 }
@@ -268,7 +268,7 @@ a:hover {
     border-radius: 8px;
     padding: 1.5rem;
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     box-shadow: 0 0 15px rgba(220, 20, 60, 0.5);
     display: flex;
     flex-direction: column;
@@ -444,6 +444,7 @@ footer {
 
     .movie-poster img {
         max-width: 80%;
+        align-self: center;
     }
 
     #review-container, #movie-review-form {
@@ -469,6 +470,11 @@ footer {
         right: 0.3rem;
         top: 50%;
         transform: translateY(-50%);
+    }
+
+    .home-content {
+        /* === to offset the margin gap === */
+        margin-top: 0rem; 
     }
 
     .home-title {
