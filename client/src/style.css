@@ -9,7 +9,7 @@ body {
     flex-direction: column;
 }
 
-/* === Header + Nav Bar ===*/
+/* === header + nav bar ===*/
 header {
     display: flex;
     justify-content: space-between;

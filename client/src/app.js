@@ -24,6 +24,12 @@ function handleSubmit(event) {
             "Content-Type": "application/json",
         },
         body: JSON.stringify({ formValues }),
+    }).then((response) => { //for checking if POST is successful - page refreshes when submit is a success
+        if (response.ok) {
+            window.location.reload();
+        } else {
+            console.log("Review submission failed. Please try again.")
+        };
     });
 };
 
@@ -72,7 +78,7 @@ async function displayReviews() {
 
         const reviewRating = document.createElement("div");
         reviewRating.className = "review-rating";
-        //render star rating 
+        //render star rating (ghost icons)
         for (let i = 1; i <= 5; i++) {
             const star = document.createElement("i");
             if (i <= review.rating) {
