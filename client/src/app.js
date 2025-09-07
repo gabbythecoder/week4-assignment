@@ -137,12 +137,12 @@ const navMenu = document.querySelector(".nav-menu");
         navMenu.classList.remove("active");
     }));
 
-    //character count for textarea 
-    const reviewTextarea = document.getElementById("review");
-    const characterCount = document.getElementById("character-count");
-    const maxLength = reviewTextarea.getAttribute("maxlength");
+//character count for textarea 
+const reviewTextarea = document.getElementById("review");
+const characterCount = document.getElementById("character-count");
+const maxLength = reviewTextarea.getAttribute("maxlength");
 
-    reviewTextarea.addEventListener("input", () => {
-        const currentLength = reviewTextarea.value.length;
-        characterCount.textContent = `${currentLength} / ${maxLength} characters`;
-    })
+reviewTextarea.addEventListener("input", () => {
+    const currentLength = reviewTextarea.value.length;
+    characterCount.textContent = `${currentLength} / ${maxLength} characters`;
+})
