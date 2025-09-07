@@ -52,7 +52,7 @@ Any feedback will be appreciated as I am always looking for ways to continuously
 ## Wireframe
 The wireframe below details the layout for both desktop and mobile view. The main purpose of the webpage is to create a seamless user experience for submitting a movie review. As you can see, there are slight differences to the webpage compared to the wireframe. I added a home content section just below the header to improve the flow of the page. The movie poster on the left with the review section and form on the right turned out really well on desktop. With the mobile view, I have the sections stacked for a clean look and better user experience. 
 
-With the colour theme, I had to tweak the colours a little bit for better colour contrast but still matches the initial vibe I was going for, especially with the red colour. There are slight variations of red - have about three types of red, especially for hover effects. My idea was to keep the colour scheme simple but play around with the variations so it still matches the horror vibe. 
+With the colour theme, I had to tweak the colours a little bit for better colour contrast but still matches the initial vibe I was going for, especially with the red colour. There are slight variations of red - have about three types of red, especially for hover effects. For the submit button, it is a brighter shade of red, but when users hover over it, the shade is slightly darker. My idea was to keep the colour scheme simple but play around with the variations so it still matches the horror vibe. 
 
 <div align="center">
     <img src="./images/horrorview-wireframe.png">
