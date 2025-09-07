@@ -14,8 +14,8 @@ Created a movie review webpage called HorrorView as part of the Tech Educators c
 ## Stretch Requirements
 - 🏹 Provide additional functionality on the form, for example, by adding form validation or other options. ✅
 - 🏹 Style the page excellently, for example, by adding extra UX considerations or animations. ✅
-- 🏹 Add a delete button to each message and a DELETE route in the server.
-- 🏹 Create an option for users to like others’ posts.
+- 🏹 Add a delete button to each message and a DELETE route in the server. ❌
+- 🏹 Create an option for users to like others’ posts. ❌
 
 ## Reflection
 For this assignment, I decided to create a movie review webpage called HorrorView. It is dedicated to users who are fans of the horror genre and can write reviews of their favourite horror films. This assignment was a blast. I really enjoyed creating a full-stack webpage and having the client, server and database connect with one another.  
@@ -41,11 +41,22 @@ Throughout the website build, I used colour contrast checker to ensure the colou
 
 One difficulty I had was implementing the rating system on the review form. I initially used a star rating system but to match with the theme of my webpage, I decided to use ghost icons from Font Awesome. At first, the ghost icons would not render on the page and after reading through resources, I discovered that only certain icons were available for the free version. After spending a couple of hours fixing this and updating the JavaScript, the reviews are now rendered correctly with the correct rating system for my webpage. I also add interactivity for the ghost icons for when you hover over them and when you select them. 
 
-One thing I would have like to add is more variations of movies on the website. Maybe use an API like TMDB. But what I wanted to focus on was completing the assignment with all the requirements needed. Which is why I kept it simple by only using one movie for the reviews. When I was testing sending data across to the databse, I used different movies but I then filtered only reviews relevant to 'Scream' to render on the page. 
+When I was testing the submit button on my form, there was no prompt to inform me whether the submission was successful or not. Instead of ```alert()```, I wanted to do something different. I initally wanted to add a success banner that pops up to indicate whether the submit was successful or not, which would improve the users experience. However, when I played around with the code, it wasn't showing up for me when I tested it. The submit button still works and I was still receiving data to my database, but the success banner was not rendering on the page. With this failing for me, I researched online and found an alternative - ```window.location.reload()``` - which automatically refreshes the page when the submit form is successful. I have tested this and I am happy to say that this is all working perfectly. 
+
+One thing I would have like to add is more variations of movies on the website. Maybe use an API like TMDB. But what I really wanted to focus on was completing the assignment with all the requirements needed. Which is why I kept it simple by only using one movie for the reviews. When I was testing sending data across to Supabase initially, I used different movie titles but I then filtered only reviews relevant to 'Scream' to render on the page. 
 
 At first glance, the assignment seemed difficult to achieve. I felt overwhelmed with the idea of creating a full-stack webpage. But as I started to break down the individual requirements and with the knowledge I have gained over the past few weeks, it felt doable. Most of what I did in last week's assignment was implemented in creating HorrorView. I really enjoyed creating the back-end side of the webpage, especially since this is the first time doing it on my own as a project. Overall, this was a really exciting assignment to showcase all the skills I have gained since I started the bootcamp. I am very proud of myself with what I have been able to accomplish in such a short amount of time. 
 
 Any feedback will be appreciated as I am always looking for ways to continuously improve.
+
+## Wireframe
+The wireframe below details the layout for both desktop and mobile view. The main purpose of the webpage is to create a seamless user experience for submitting a movie review. As you can see, there are slight differences to the webpage compared to the wireframe. I added a home content section just below the header to improve the flow of the page. The movie poster on the left with the review section and form on the right turned out really well on desktop. With the mobile view, I have the sections stacked for a clean look and better user experience. 
+
+With the colour theme, I had to tweak the colours a little bit for better colour contrast but still matches the initial vibe I was going for, especially with the red colour. There are slight variations of red - have about three types of red, especially for hover effects. My idea was to keep the colour scheme simple but play around with the variations so it still matches the horror vibe. 
+
+<div align="center">
+    <img src="./images/horrorview-wireframe.png">
+</div>
 
 ## Resources 
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/radio
@@ -53,8 +64,10 @@ Any feedback will be appreciated as I am always looking for ways to continuously
 - https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/data-*
 - https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute
+- https://developer.mozilla.org/en-US/docs/Web/API/Location/reload
 - https://www.geeksforgeeks.org/javascript/word-and-character-counter-using-html-css-and-javascript/
 - https://www.w3schools.com/css/css_form.asp
+- https://codeworks.me/blog/how-to-reload-a-page-in-javascript/
 - https://supabase.com/docs/guides/database/tables
 - https://www.youtube.com/watch?v=q1xhbc-oKnc&ab_channel=CodingLab
 - https://www.youtube.com/watch?v=flItyHiDm7E&ab_channel=WebDevTutorials 
