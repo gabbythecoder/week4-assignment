@@ -25,7 +25,7 @@ app.get("/", (request, response) => {
 // todo - want to READ (GET) all data from my table
 app.get("/movie-reviews", async (request, response) => {
     //query the database
-    const query = await db.query(`SELECT * FROM movie_reviews`);
+    const query = await db.query(`SELECT * FROM movie_reviews ORDER BY id DESC`);
     response.json(query.rows);
 });
 
