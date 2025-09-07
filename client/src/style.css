@@ -1,8 +1,11 @@
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #111;
-    scroll-behavior: smooth;
     color: #eee;
     min-height: 100vh;
     display: flex;
